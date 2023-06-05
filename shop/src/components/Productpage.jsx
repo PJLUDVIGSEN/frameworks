@@ -1,10 +1,7 @@
 import { useEffect,useState } from "react";
 import { useParams } from "react-router-dom";
 import { useData } from "../api/useData";
-
-export function addCartClick() {
-    
-}
+import { useCartStore } from "./useCartStore";
 
 
 export function Productpage() {
@@ -12,18 +9,13 @@ export function Productpage() {
   const newUrl = `https://api.noroff.dev/api/v1/online-shop/${id}`;
   const { data, isLoading, isError } = useData(newUrl);
   const product = data;
-  console.log(data)
   const discount = (product.price - product.discountedPrice) / product.price * 100.0;
   var showDiscount = `${discount.toFixed(0)}% Off`
   if (discount === 0) {
     showDiscount = "";
   }
 
-  function addCartClick() {
-    
-  }
-
-  console.log(discount)
+  const addToCart = useCartStore((state) => state.addToCart);
   return (
             <section className="py-5">
             <div className="container px-4 px-lg-5 my-5">
@@ -37,8 +29,7 @@ export function Productpage() {
                         </div>
                           <p className="lead">{product.description}</p>
                         <div className="d-flex">
-                            <input className="form-control text-center me-3" id="inputQuantity" type="num" value="1" />
-                            <button onClick={addCartClick()} className="btn btn-outline-dark flex-shrink-0" type="button">
+                            <button onClick={addToCart} className="btn btn-outline-dark flex-shrink-0" type="button">
                                 <i className="bi-cart-fill me-1"></i>
                                 Add to cart
                             </button>
