@@ -26,7 +26,14 @@ export function Header() {
           <li className="nav-item">
             <a className="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">Disabled</a>
           </li>
-        </ul>
+          </ul>
+          <form className="d-flex">
+            <button className="btn btn-outline-dark" type="submit">
+              <i className="bi-cart-fill me-1"></i>
+              Cart
+              <span className="badge bg-dark text-white ms-1 rounded-pill">0</span>
+            </button>
+          </form>
       </div>
     </div>
   </nav>
