@@ -21,10 +21,7 @@ export function Header() {
             <Link to="/" className="nav-link active" aria-current="page">Home</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Features</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Pricing</a>
+            <Link to="/Contact" className="nav-link" >Contact us</Link>
           </li>
           </ul>
           <form className="d-flex">
