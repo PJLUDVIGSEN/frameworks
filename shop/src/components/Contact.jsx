@@ -29,6 +29,7 @@ export function Contact() {
         alert("Please fill in required fields")
       return;
     }
+    alert("Form successfully submitted")
     console.log("Form submitted:", { fullName, subject, email, body });
     setFullName("");
     setSubject("");
