@@ -18,7 +18,7 @@ export function Header() {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="#">Home</a>
+            <Link to="/" className="nav-link active" aria-current="page">Home</Link>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">Features</a>
@@ -26,16 +26,13 @@ export function Header() {
           <li className="nav-item">
             <a className="nav-link" href="#">Pricing</a>
           </li>
-          <li className="nav-item">
-            <a className="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">Disabled</a>
-          </li>
           </ul>
           <form className="d-flex">
-            <button className="btn btn-outline-dark" type="submit">
+            <Link to="/CartPage" className="btn btn-outline-dark" type="submit">
               <i className="bi-cart-fill me-1"></i>
               Cart
               <span className="badge bg-dark text-white ms-1 rounded-pill">{cartCount}</span>
-            </button>
+            </Link>
           </form>
       </div>
     </div>
