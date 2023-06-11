@@ -12,7 +12,7 @@ export function Footer() {
           <svg className="bi" width="30" height="24">
           </svg>
         </a>
-        <span className="mb-3 mb-md-0 text-muted">© 2023 NoroffShopLOLOLOL, Inc</span>
+        <span className="mb-3 mb-md-0 text-muted">© 2023 SuperShopper, Inc</span>
       </div>
 
       <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">

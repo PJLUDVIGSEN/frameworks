@@ -16,7 +16,6 @@ function App() {
   );
   const item = data;
   return (
-    <div>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Products />} />
@@ -26,7 +25,6 @@ function App() {
           <Route exact path="/Contact" element={<Contact />} />
         </Route>
       </Routes>
-    </div>
   );
 }
 

@@ -23,12 +23,14 @@ export function Contact() {
   }
 
   const handleSubmit = (event) => {
+    const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i;
     event.preventDefault();
-      if (!fullName || !subject || !email || !body) {
+      if (!fullName || !subject || !email || !body || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email) ) {
         console.log("Please fill in required fields");
         alert("Please fill in required fields")
       return;
     }
+
     alert("Form successfully submitted")
     console.log("Form submitted:", { fullName, subject, email, body });
     setFullName("");
@@ -42,22 +44,22 @@ export function Contact() {
       <div className="align-self-center text-align-center justify-content-center d-flex pt-5"><h1>Contact Us</h1></div>
       <form className="pt-5">
       <div className="form-outline mb-4">
-        <label htmlFor="fullName" className="form-label" for="fullName">Fullname</label>
+        <label htmlFor="fullName" className="form-label">Fullname</label>
         <input required minLength={3} onChange={onFullNameChange} type="text" value={fullName} id="fullName" className="form-control" />
       </div>
         
       <div className="form-outline mb-4">
-        <label htmlFor="subject" className="form-label" for="subject">Subject</label>
+        <label htmlFor="subject" className="form-label">Subject</label>
         <input required minLength={3} onChange={onSubjectChange} type="text" value={subject} id="subject" className="form-control" />
       </div>
 
       <div className="form-outline mb-4">
-        <label htmlFor="email" className="form-label" for="email">Email address</label>
+        <label htmlFor="email" className="form-label">Email address</label>
         <input required onChange={onEmailChange} type="email" value={email} id="email" className="form-control" />
       </div>
 
       <div className="form-outline mb-4">
-        <label htmlFor="body" className="form-label" for="body">Message</label>
+        <label htmlFor="body" className="form-label">Message</label>
         <textarea required minLength={3} onChange={onBodyChange} className="form-control" value={body} id="body" rows="4"></textarea>
         </div>
         
