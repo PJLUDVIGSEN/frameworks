@@ -11,8 +11,8 @@ export function CartPage() {
     <div className="container cart justify-content-center">
       <h1>Cart</h1>
       <ul className="list-group">
-        {products?.map((product) => (
-          <li key={product.id} className="list-group-item">
+        {products?.map((product, index) => (
+          <li key={index} className="list-group-item">
             <h3>{product.title}</h3>
             <p>Price: {product.discountedPrice},-</p>
           </li>
