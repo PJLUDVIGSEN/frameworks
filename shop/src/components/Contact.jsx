@@ -23,7 +23,6 @@ export function Contact() {
   }
 
   const handleSubmit = (event) => {
-    const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i;
     event.preventDefault();
       if (!fullName || !subject || !email || !body || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email) ) {
         console.log("Please fill in required fields");

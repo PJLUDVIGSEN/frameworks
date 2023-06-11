@@ -17,22 +17,6 @@ export function Footer() {
 
       <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
         <li className="ms-3">
-          <a className="text-muted" href="#">
-            <svg className="bi" width="24" height="24">
-            </svg>
-          </a>
-        </li>
-        <li className="ms-3">
-          <a className="text-muted" href="#">
-            <svg className="bi" width="24" height="24">
-            </svg>
-          </a>
-        </li>
-        <li className="ms-3">
-          <a className="text-muted" href="#">
-            <svg className="bi" width="24" height="24">
-            </svg>
-          </a>
         </li>
       </ul>
     </footer>

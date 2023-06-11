@@ -4,7 +4,7 @@ import { useCartStore } from "./useCartStore";
 
 export function Header() {
   
-  const { cartCount, addToCart } = useCartStore();
+  const { cartCount } = useCartStore();
 
   return (
   <nav className="navbar navbar-expand-lg navbar-light bg-light">

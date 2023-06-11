@@ -1,4 +1,3 @@
-import { useEffect,useState } from "react";
 import { useParams } from "react-router-dom";
 import { useData } from "../api/useData";
 import { useCartStore } from "./useCartStore";
@@ -7,7 +6,7 @@ import { useCartStore } from "./useCartStore";
 export function Productpage() {
   const { id } = useParams();
   const newUrl = `https://api.noroff.dev/api/v1/online-shop/${id}`;
-  const { data, isLoading, isError } = useData(newUrl);
+  const { data } = useData(newUrl);
   const product = data;
   const discount = (product.price - product.discountedPrice) / product.price * 100.0;
   var showDiscount = `${discount.toFixed(0)}% Off`
@@ -38,7 +37,7 @@ export function Productpage() {
                   </div>
               </div>
             <ul className="list-group pt-2">
-              {product.reviews ?.map((review) => (
+              {product.reviews?.map((review) => (
               <li key={review.id} className="list-group-item">
                   <h3>{review.username}</h3>
                   <p>{review.description}</p>

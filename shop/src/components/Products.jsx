@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 
 export function Products() {
-    const { data, isloading, error } = useData(
+    const { data } = useData(
     "https://api.noroff.dev/api/v1/online-shop"
   );
   const products = data;

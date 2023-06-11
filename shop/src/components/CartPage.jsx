@@ -1,7 +1,5 @@
 import { useCartStore } from "./useCartStore";
 import { Link } from "react-router-dom";
-import { shallow } from "zustand/shallow";
-import { Checkout } from "./Checkout";
 
 export function CartPage() {
   const { products } = useCartStore();
